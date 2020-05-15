@@ -49,6 +49,12 @@ pipeline {
           }
         }
 
+        stage('') {
+          steps {
+            build 'testjob'
+          }
+        }
+
       }
     }
 
