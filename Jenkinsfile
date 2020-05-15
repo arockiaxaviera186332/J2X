@@ -3,23 +3,22 @@ pipeline {
   stages {
     stage('Build') {
       parallel {
-        stage('step1') {
+        stage('Build1') {
           steps {
-            echo 'Build'
             echo 'Build 1'
           }
         }
 
-        stage('step2') {
+        stage('Build2') {
           steps {
-            echo 'build1'
+            echo 'Build 2'
           }
         }
 
       }
     }
 
-    stage('Deploy1') {
+    stage('Deploy') {
       parallel {
         stage('Deploy1') {
           steps {
@@ -27,7 +26,7 @@ pipeline {
           }
         }
 
-        stage('Deploy 2') {
+        stage('Deploy2') {
           steps {
             echo 'Deploy 2'
           }
@@ -36,17 +35,17 @@ pipeline {
       }
     }
 
-    stage('Test 1') {
+    stage('SmokeTest') {
       parallel {
-        stage('Test 1') {
+        stage('SmokeTest1') {
           steps {
-            echo 'test'
+            echo 'Smoke Test 1'
           }
         }
 
-        stage('Test2') {
+        stage('SmokeTest2') {
           steps {
-            echo 'Test'
+            echo 'Smoke Test 2'
           }
         }
 
