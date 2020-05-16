@@ -49,7 +49,7 @@ pipeline {
           }
         }
 
-        stage('error') {
+        stage('Smoke Test 3') {
           steps {
             build 'testjob'
           }
