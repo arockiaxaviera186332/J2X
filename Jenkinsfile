@@ -51,7 +51,7 @@ pipeline {
 
         stage('error') {
           steps {
-            build 'testjob'
+            build 'http://localhost:8080/job/testjob/'
           }
         }
 
